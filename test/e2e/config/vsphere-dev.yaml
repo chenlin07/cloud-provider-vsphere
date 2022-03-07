@@ -157,9 +157,9 @@ variables:
   VSPHERE_RESOURCE_POOL: "ResourcePool"
   VSPHERE_TEMPLATE: "ubuntu-2004-kube-v1.21.2"
   # Also following variables are required but it is recommended to use env variables to avoid disclosure of sensitive data
-  # VSPHERE_SSH_AUTHORIZED_KEY:
-  # VSPHERE_USERNAME:
-  # VSPHERE_PASSWORD:
+  VSPHERE_SSH_AUTHORIZED_KEY: ${VSPHERE_SSH_AUTHORIZED_KEY}
+  VSPHERE_USERNAME: ${VSPHERE_USERNAME}
+  VSPHERE_PASSWORD: ${VSPHERE_PASSWORD}
 
 intervals:
   default/wait-controllers: ["5m", "10s"]
